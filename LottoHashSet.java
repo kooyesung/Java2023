@@ -1,6 +1,7 @@
 package s0828;
 
-import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Random;
 
 public class LottoHashSet {
@@ -8,14 +9,12 @@ public class LottoHashSet {
 	public void getRandomBalls() {
 		// TODO Auto-generated method stub
 		
-		ArrayList<Integer> lotto = new ArrayList<>();
+		HashSet<Integer> lotto = new HashSet<>();
 		while(lotto.size()<6) {
 			
 			Random r = new Random();
 			Integer num = r.nextInt(45) + 1;
-			if(lotto.contains(num))
-				continue;
-			else
+			
 				lotto.add(num);
 			 
 		}
